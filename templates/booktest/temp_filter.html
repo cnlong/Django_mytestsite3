@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load filters %}
+<head>
+    <meta charset="UTF-8">
+    <title>模板过滤器</title>
+    <style>
+        .red{background-color: red;}
+    </style>
+</head>
+<body>
+{% for foo in book %}
+{#    {% if foo.id <= 2 %}#}
+{#    {% if foo.id|mod %}#}
+    {% if foo.id|mod_var:3 %}
+        <li class = 'red'>{{ foo.btitle }}---{{ foo.bpub_date | date:'Y年-m月-d日' }}</li>
+        <!-- Ymd是date函数的参数，Y表示以4位显示年，m表示以两位数字显示月，d... -->
+    {% endif %}
+{% endfor %}
+
+default过滤器:<br>
+{{ content|default:'hahaha' }}
+
+
+</body>
+</html>

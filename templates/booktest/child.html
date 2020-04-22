@@ -1,0 +1,8 @@
+{% extends 'booktest/base.html' %}
+{% block title %}
+    子模板文件
+{% endblock %}
+{% block block1 %}
+    {{ block.super }}<br>
+    <h1>这是子模板</h1>
+{% endblock %}

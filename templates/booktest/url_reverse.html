@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>url反向解析</title>
+</head>
+<body>
+index连接：<br>
+<a href="/index">首页</a><br>
+url反向解析：<br>
+<a href="{% url 'index' %}">首页</a>
+show_args:<br>
+<a href="{% url 'showargs' 1 2 %}">show_args/1/2</a>
+</body>
+</html>
